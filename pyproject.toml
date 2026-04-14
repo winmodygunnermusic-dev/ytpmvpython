@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ytpmvpython"
+version = "0.1.0"
+description = "Utilities to build YTPMVs with module parsing, audio rendering, and video rendering"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [{ name = "ytpmvpython contributors" }]
+keywords = ["ytpmv", "tracker", "audio", "video"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Operating System :: Microsoft :: Windows",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project.scripts]
+ytpmvpython-gui = "ytpmvpython.gui:run_gui"
